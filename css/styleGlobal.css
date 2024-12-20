@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+header{
+    display: flex;
+    padding: 20px;
+    width: 100vw;
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.23);
+}
+
+.header-navigation{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-navigation li{
+    list-style: none;
+    margin-left: 10px;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(0, 0, 0, 0.23);
+    cursor: pointer;
+}
+
+.header-navigation li:hover{
+    color: red;
+}
+
+#icone-menu-lateral{
+    display: none;
+    height: 30px;
+    cursor: pointer;
+}
+
+#bg-container-menuMobile {
+    position: fixed;       /* Fixa o menu na tela */
+    top: 0;
+    right: 0;
+    height: 100vh;         /* Altura total da tela */
+    width: 0;              /* Inicialmente, o menu está oculto */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
+    transition: width 0.5s ease; /* Transição suave */
+    z-index: 1000;         /* Garante que o menu apareça sobre outros elementos */
+}
+
+#bg-container-menuMobile.open {
+    width: 250px;   /* Largura do menu */
+}
+
+.container-menuMobile {
+    height: 100%;
+    width: 250px;  /* Largura do menu */
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-menuMobile ul li{
+    color: white;
+    font-size: 25px;
+    list-style: none;
+    margin-top: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+.container-menuMobile ul li:hover{
+    transform: scale(1.3);
+    opacity: 0.6;
+}
+
+.header-fechar{
+    display: flex;
+    top: 0;
+    width: 100%;
+    padding-right: 10px;
+    
+    justify-content: right;
+    background-color: red;
+}
+
+.header-fechar{
+   
+}
+
+/* Media Queries */
+
+@media (min-width: 320px) and (max-width: 768px){
+    #icone-menu-lateral{
+        display: block;
+    }
+
+    .header-navigation{
+        display: none;
+    }
+}
