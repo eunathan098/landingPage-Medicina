@@ -3,6 +3,13 @@
     padding: 0;
     font-size: 18px;
     font-weight: 600;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
 header{
@@ -43,23 +50,23 @@ header{
 }
 
 #bg-container-menuMobile {
-    position: fixed;       /* Fixa o menu na tela */
+    position: fixed;    
     top: 0;
     right: 0;
-    height: 100vh;         /* Altura total da tela */
-    width: 0;              /* Inicialmente, o menu está oculto */
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
-    transition: width 0.5s ease; /* Transição suave */
-    z-index: 1000;         /* Garante que o menu apareça sobre outros elementos */
+    height: 100vh;        
+    width: 0; 
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: width 0.5s ease; 
+    z-index: 1000;  
 }
 
 #bg-container-menuMobile.open {
-    width: 250px;   /* Largura do menu */
+    width: 250px; 
 }
 
 .container-menuMobile {
     height: 100%;
-    width: 250px;  /* Largura do menu */
+    width: 250px; 
     background-color: red;
     color: white;
     display: flex;
@@ -92,9 +99,34 @@ header{
     background-color: red;
 }
 
-.header-fechar{
-   
+.content-fechar{
+    display: flex;
+    text-align: right;
+    justify-content: right;
+    position: absolute;
+    width: 100%;
+    top: 3%;
+    right: 5%;
 }
+
+.container-menu-fechar{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+}
+
+#btn-fechar-menu-Mobile{
+   display: none;
+}
+
+/* Content */
+/* CARROSSEL */
+
 
 /* Media Queries */
 
